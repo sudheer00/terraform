@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages {
         stage("OS version") {
-            steps {
+          steps {
                 echo 'Terraform version..'
-                sh "sh terraform version"
+                sh "terraform version"
             }
         }
         stage ("terraform initilization") {
@@ -13,11 +13,10 @@ pipeline {
           }
         }
         stage ("Deploy") {
-            steps {
+          steps {
           echo "Selected option is --> ${action}"
           sh "terraform ${action}  --auto-approve"
-              
-                }
+           }
         }        
     }
 }
