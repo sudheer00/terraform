@@ -8,7 +8,7 @@
 variable "instance-ami" {
   description = "The AMI (Amazon Machine Image) that identifies the instance"
   type        = string
-  default     = "ami-0e7a875609d14906f"
+  default     = "ami-068257025f72f470d"
 }
 
 variable "instance-type" {
